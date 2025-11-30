@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ParikshaEdu Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomePage" class="fullPage" onclick="goToSignIn()">
+        <h1 class="bigTitle">Welcome to <span>MCQ TAKER</span></h1>
+        <p class="clickText"></p>
+    </div>
+
+
+    <div id="signPage" class="fullPage" style="display:none;">
+        <div class="signBox">
+            <h2>Sign In</h2>
+            
+            <input type="text" id="userName" placeholder="Enter your name">
+            <input type="email" id="userEmail" placeholder="Enter your email">
+            <button onclick="startTestFromSignIn()">Sign in</button>
+        </div>
+    </div>
+
+
+    <div id="startPage" class="fullPage startPage" style="display:none;">
+        <div class="startBox">
+            <h1>All the best, <span id="displayName"></h1>
+            <p>Ready to start your test?</p>
+            <button onclick="startTestFromStartPage()">Start Your Test</button>
+        </div>
+    </div>
+
+    <div id="quizPage" style="display:none;">
+        <div class="quizBox">
+            <h3 id="qProgress"></h3>
+            <h1 id="qNo"></h1>
+            <h2 id="questionText"></h2>
+            <div id="options" class="optionsBox"></div>
+
+            <div class="navButtons">
+                <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+                <button id="nextBtn" onclick="nextQuestion()">Next</button>
+                <button id="submitBtn" onclick="submitTest()" style="display:none;">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultPage" style="display:none;">
+        <div class="resultBox">
+            <h1>Test Result</h1>
+            <p id="scoreText"></p>
+            <button onclick="location.reload()">Take Test Again</button>
+        </div>
+    </div>
+
+  
+    
+    <script src="script.js"></script>
+</body>
+</html>
